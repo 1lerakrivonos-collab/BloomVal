@@ -1,0 +1,194 @@
+:root {
+    --accent: #ff6b81;
+    --accent-hover: #ee5253;
+    --dark: #2f3542;
+    --light-pink: #fdf1f2;
+    --gold: #d4af37;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: var(--dark);
+    scroll-behavior: smooth;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span { color: var(--accent); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* Герой-секція */
+.hero {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1519225495810-75178319a13e?auto=format&fit=crop&w=1500&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 60px;
+    border-radius: 2px;
+    border: 1px solid var(--gold);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span { color: var(--accent); font-style: italic; }
+
+.btn-main {
+    background: var(--dark);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.btn-main:hover { background: var(--accent); transform: scale(1.05); }
+
+/* Каталог */
+.active-section { padding: 80px 8%; animation: fadeInUp 0.6s ease; }
+.hidden-section { display: none; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.product-card:hover { transform: translateY(-10px); }
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.btn-select {
+    background: var(--light-pink);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-select:hover { background: var(--accent); color: white; }
+
+/* Кошик */
+.cart-container { margin-top: 60px; display: flex; justify-content: center; }
+
+.cart-card {
+    background: var(--dark);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.total { font-size: 22px; font-weight: 700; color: var(--accent); }
+
+.btn-order {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Про нас */
+.student-card {
+    background: var(--light-pink);
+    padding: 20px;
+    border-left: 5px solid var(--accent);
+    margin-top: 30px;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
